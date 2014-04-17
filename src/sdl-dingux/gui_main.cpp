@@ -633,6 +633,7 @@ void gui_reset_selection()
 
 void gui_validate_selection()
 {
+	gui_get_filtered_romsort(cfg.list, cfg.hardware, cfg.genre, cfg.clone); // apply filters
 	if (sel.rom < 0 || sel.ofs < 0 ||
 		sel.y < START_Y - 1 || sel.y > START_Y + (LINES_COUNT - 1) * LINE_HEIGHT ||
 		sel.rom > romlist.nb_list[cfg.list] - 1 ||
