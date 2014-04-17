@@ -1095,6 +1095,7 @@ void load_lastsel()
 		fread(&sel.y, 1, sizeof(int), fp);
 		fclose(fp);
 	}
+	gui_validate_selection();
 }
 
 void gui_menu_main()
