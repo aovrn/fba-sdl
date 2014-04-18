@@ -1263,7 +1263,7 @@ void gui_menu_main()
 					} else if (romlist.nb_list[cfg.list] == 0) {
 					} else if (sel.rom == 0 && compteur == 0) {
 						sel.rom = romlist.nb_list[cfg.list] - 1;
-						if (romlist.nb_list[cfg.list] < LINES_COUNT - 1) {
+						if (romlist.nb_list[cfg.list] < LINES_COUNT) {
 							sel.y = START_Y - 1 + ((romlist.nb_list[cfg.list] - 1) * LINE_HEIGHT);
 							//sel.ofs = 0;
 						} else {
