@@ -104,12 +104,12 @@ void sdl_input_read(bool process_autofire) // called from do_keypad()
 					}
 					event.type = (autofire_state[it].state == 1) ? SDL_KEYDOWN : SDL_KEYUP;
 					autofire_state[it].state = autofire_state[it].state % 2 + 1;
-					event.key.keysym.sym = autofire_state[it].keymap;
+					event.key.keysym.sym = (SDLKey)autofire_state[it].keymap;
 					handle = true;
 				}
 			}
 			if (!handle) {
-				break;;
+				break;
 			}
 		}
 		if (event.type == SDL_KEYUP) {

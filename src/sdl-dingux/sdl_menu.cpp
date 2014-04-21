@@ -97,7 +97,7 @@ MENUITEM gui_MainMenuItems[] = {
 	{NULL, NULL, 0, NULL, NULL}
 };
 
-MENU gui_MainMenu = { 6, 0, (MENUITEM *)&gui_MainMenuItems };
+MENU gui_MainMenu = { 7, 0, (MENUITEM *)&gui_MainMenuItems };
 
 MENUITEM gui_KeyMenuItems[] = {
 	{(char *)"Fire 1   - ", &gui_KeyData[0], 5, (char **)&gui_KeyNames, NULL},
