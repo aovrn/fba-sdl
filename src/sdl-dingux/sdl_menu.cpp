@@ -27,6 +27,7 @@
 #include "snd.h"
 #include "sdl_run.h"
 #include "sdl_video.h"
+#include "sdl_input.h"
 
 #ifdef FBA_DEBUG
 #include "m68000_intf.h"
@@ -297,6 +298,7 @@ static void gui_AutofireMenuRun()
 		af->fps = gui_AutofireFpsValue[gui_AutofireFpsData[i]];
 		af->key = gui_KeyValue[gui_KeyData[i]];
 	}
+	sdl_autofire_init();
 }
 
 static void gui_reset()

@@ -286,8 +286,10 @@ void sdl_input_init()
 			printf("Axis %d\n",SDL_JoystickNumAxes(joys[i]));
 		}
 	}
+	sdl_autofire_init();
+}
 
-	// autofire init
+void sdl_autofire_init() {
 	autofire_count = 0;
 	CFG_AUTOFIRE_KEY *af = &autofire.fire1;
 	int *key = &keymap.fire1;
